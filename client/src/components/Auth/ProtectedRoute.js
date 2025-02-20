@@ -12,9 +12,7 @@ const ProtectedRoute = () => {
       const toastId = toast.loading('Checking authentication...');
       
       try {
-        const response = await axios.get('/user/data');
-        const userData = response.data.userData;
-        
+        await axios.get('/user/data');
         setIsAuthenticated(true);
         toast.success('Authentication successful', { id: toastId });
       } catch (error) {
