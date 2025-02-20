@@ -1,0 +1,13 @@
+Please build a professional and modern frontend for the existing backend, without making any changes to the backend folder named "server".
+
+Create the frontend inside a folder called "client" using React.js and Tailwind CSS.
+
+Ensure the UI is sleek, well-structured, and visually appealing, following best practices for modern web design.
+
+The design should be highly polished, dynamic, and responsive, offering a smooth user experience with a professional and intuitive layout.
+
+Use the existing backend API endpoints to fetch and display data.
+
+Ensure the frontend is well-documented with comments to explain the code.
+
+Use React JS and Tailwind CSS for the frontend.
