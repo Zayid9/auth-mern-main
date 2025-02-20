@@ -22,13 +22,14 @@ app.use(cookieParser());
 // Configure CORS
 app.use(cors({
     origin: [
-        "http://localhost:3001",
-        "https://fobis-auth.netlify.app"  // Allow frontend domain
+        "https://fobis-auth.netlify.app",
+        "http://localhost:3000",
+        "http://localhost:3001"
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
-    exposedHeaders: ['set-cookie']
+    exposedHeaders: ['Set-Cookie']
 }));
 
 // Base API Route
@@ -36,6 +37,7 @@ app.get("/api", (req, res) => {
     res.json({ 
         message: "API is working!",
         status: "success",
+        environment: process.env.NODE_ENV,
         timestamp: new Date().toISOString()
     });
 });
