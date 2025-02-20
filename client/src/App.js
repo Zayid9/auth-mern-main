@@ -37,6 +37,15 @@ const Layout = ({ children, showNavbar = true, showFooter = true }) => (
   </div>
 );
 
+// Wrap component with Layout
+const withLayout = (Component, { showNavbar = true, showFooter = true } = {}) => {
+  return (props) => (
+    <Layout showNavbar={showNavbar} showFooter={showFooter}>
+      <Component {...props} />
+    </Layout>
+  );
+};
+
 function App() {
   return (
     <ThemeProvider>
@@ -67,12 +76,12 @@ function App() {
         />
         <Routes>
           {/* Public Routes */}
-          <Route path="/*" element={<Home />} />
+          <Route path="/*" element={withLayout(Home)()} />
 
           {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
-            <Route path="/verify" element={<VerificationPage />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/verify" element={withLayout(VerificationPage)()} />
+            <Route path="/dashboard" element={withLayout(Dashboard, { showNavbar: false, showFooter: false })()} />
           </Route>
 
           {/* Catch all route */}
