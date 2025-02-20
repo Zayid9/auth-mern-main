@@ -4,22 +4,22 @@ import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from './context/ThemeContext';
 
 // Auth Components
-import Login from './components/Auth/Login';
-import Register from './components/Auth/Register';
-import ForgotPassword from './components/Auth/ForgotPassword';
+// import Login from './components/Auth/Login';
+// import Register from './components/Auth/Register';
+// import ForgotPassword from './components/Auth/ForgotPassword';
 import VerificationPage from './components/Auth/VerificationPage';
 import Dashboard from './components/Dashboard/Dashboard';
 import ProtectedRoute from './components/Auth/ProtectedRoute';
 
 // Landing Page Components
-import LandingPage from './components/Landing/LandingPage';
+// import LandingPage from './components/Landing/LandingPage';
 import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
 
 // New Pages
-import Features from './pages/Features';
-import About from './pages/About';
-import Contact from './pages/Contact';
+// import Features from './pages/Features';
+// import About from './pages/About';
+// import Contact from './pages/Contact';
 
 // Components
 import Home from './components/Home/Home';
